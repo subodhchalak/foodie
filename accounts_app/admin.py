@@ -9,7 +9,7 @@ from accounts_app.models import (
 
 @admin.register(User)
 class CustomUserAdmin(UserAdmin):
-    list_display = ('id', 'username', 'email', 'first_name', 'last_name')
+    list_display = ('id', 'username', 'email', 'first_name', 'last_name', 'role')
     filter_horizontal = ()
     fieldsets = ()
     ordering = ('-id', )

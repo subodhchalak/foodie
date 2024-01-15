@@ -22,6 +22,7 @@ class UserForm(forms.ModelForm):
         )
 
     def clean(self):
+        print("User form clean method is called.... ")
         cleaned_data = super().clean()
         error_dict = {}
         password = cleaned_data.get('password', '')

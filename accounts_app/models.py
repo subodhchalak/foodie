@@ -14,7 +14,7 @@ from django.contrib.auth.validators import UnicodeUsernameValidator
 
 class User(AbstractUser):
     ROLE_CHOICES = (
-        ('restaurant', 'Restaurant'),
+        ('vendor', 'Vendor'),
         ('customer', 'Customer')
     )
     phone_number = models.CharField(max_length=10)
@@ -137,7 +137,10 @@ class Profile(models.Model):
     )
     
     def __str__(self):
-        return self.user.email
+        return self.user.username
     
     class Meta:
         ordering = ('-id', )
+
+
+

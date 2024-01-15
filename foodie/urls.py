@@ -23,7 +23,8 @@ from foodie.views import home
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", home, name='home'),
-    path("accounts/", include('accounts_app.urls'))
+    path("accounts/", include('accounts_app.urls')),
+    path("vendor/", include('vendor_app.urls'))
 ]
 
 
